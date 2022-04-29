@@ -10,8 +10,6 @@
 
 ]]--
 
-local dcfr = game:GetService("Workspace")["tools/toolswhite"].CFrame
-
 local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/batusz/uilibrarys/main/AkaliNotifLib"))();
 local Notify = AkaliNotif.Notify;
 local ESP = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kiriot22/ESP-Lib/main/ESP.lua"))()
@@ -34,7 +32,8 @@ local subgames = {
     9280914973,
     9364689381,
     9431811877,
-    9289542174
+    9289542174,
+    9326578533
 }
 
 if table.find(subgames, cg) then
@@ -137,13 +136,19 @@ Tab:AddButton({
         game:GetService("TeleportService"):Teleport(9289542174, LocalPlayer)
     end
 })
+
+Tab:AddButton({
+    Name = "Teleport to Level !",
+    Callback = function()
+        game:GetService("TeleportService"):Teleport(9326578533, LocalPlayer)
+    end
+})
     
 local Tab = Window:MakeTab({
 	Name = "Misc",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-
 Tab:AddBind({
     Name = "Toggle UI",
     Default = Enum.KeyCode.RightShift,
@@ -223,9 +228,13 @@ ESP:AddObjectListener(workspace, {
     CustomName = "Door"
 })
 
+local dcfr = CFrame.new(103.583336, -48.875, 672.625)
+
 Tab:AddButton({
-    Name = "Exit Level (only works when esp loads first door)",
+    Name = "Exit Level",
     Callback = function()
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = dcfr
+	wait(0.1)
 	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = dcfr
     end
 })
@@ -319,20 +328,20 @@ Tab:AddButton({
     end
 })
 
+local cdcfr = CFrame.new(475, 3.5999999, 618.5)
+
 Tab:AddButton({
     Name = "Exit Level",
     Callback = function()
-    for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
-        if v.ClassName == "TouchTransmitter" and v.Parent ~= "HumanoidRootPart" and v.Name == "TouchInterest" then
-            firetouchinterest(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
-        end
-        end
+    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = cdcfr
+    wait(0.1)
+    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = cdcfr
     end
 })
 
 Notify({
-    Description = " INFO ";
-    Title = " No exit ESP could be made. Avoid entities and walk around until you find the exit.";
+    Title = " INFO ";
+    Description = " No exit ESP could be made. Avoid entities and walk around until you find the exit.";
     Duration = 15;
     });
 
@@ -409,6 +418,28 @@ Tab:AddButton({
             firetouchinterest(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
         end
         end
+    end
+})
+
+elseif game.PlaceId == 9361563014 then
+   
+local tcfr = game:GetService("Workspace")["tile/tilefloor013a"].CFrame
+  
+Tab:AddButton({
+    Name = "Exit Level",
+    Callback = function()
+    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = tcfr
+    end
+})
+
+elseif game.PlaceId == 9326578533 then
+    
+local dcfr = game:GetService("Workspace")["tools/toolswhite"].CFrame
+
+Tab:AddButton({
+    Name = "Exit Level",
+    Callback = function()
+    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = dcfr
     end
 })
 
