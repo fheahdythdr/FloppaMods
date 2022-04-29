@@ -9,8 +9,7 @@
     Orion UI Lib from the Sirius discord server.
 
 ]]--
-
-wait(0.5)
+wait("game:IsLoaded()")
 
 local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/batusz/uilibrarys/main/AkaliNotifLib"))();
 local Notify = AkaliNotif.Notify;
@@ -155,7 +154,7 @@ local Tab = Window:MakeTab({
 
 Tab:AddBind({
     Name = "Toggle UI",
-    Default = Enum.KeyCode.RightControl,
+    Default = Enum.KeyCode.RightShift,
     Hold = false,
     Callback = function()
         if game:GetService("CoreGui").Orion.Enabled == true then
@@ -165,9 +164,6 @@ Tab:AddBind({
         end
     end    
 })
-	
-wait(0.25)
-Bind:Set(Enum.KeyCode.RightShift)
 
 Tab:AddToggle({
 	Name = "Toggle Player ESP",
