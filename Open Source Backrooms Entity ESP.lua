@@ -176,6 +176,15 @@ Tab:AddToggle({
 	
 Tab:AddLabel("Original script creator: fheahdythdr.")
 Tab:AddLabel("Discord username and tag is oogabooga#7914")
+	
+--[[
+	
+Tab:AddLabel("Script modified by: _________")
+Tab:AddLabel("Discord username and tag is _________")
+
+use this if you want to add credits for yourself after modifying.
+	
+]]--
 
 Lib.prompt('INFO', "Default Orion hide keybind is RIGHT SHIFT.", 15)
 
