@@ -233,11 +233,7 @@ ESP:AddObjectListener(workspace, {
 Tab:AddButton({
     Name = "Exit Level (only works when esp loads first door)",
     Callback = function()
-    for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
-        if v.ClassName == "TouchTransmitter" and v.Parent ~= "HumanoidRootPart" and v.Name == "TouchInterest" then
-            firetouchinterest(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
-        end
-        end
+	firetouchinterest(game:GetService("Players").LocalPlayer, game:GetService("Workspace")["door01_left_Body"].TouchInterest, 0)
     end
 })
 
