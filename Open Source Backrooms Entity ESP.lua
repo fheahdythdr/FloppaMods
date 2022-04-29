@@ -30,7 +30,9 @@ local subgames = {
     9223234446,
     9236784419,
     9280914973,
-    9364689381
+    9364689381,
+    9431811877,
+    9289542174
 }
 
 if table.find(subgames, cg) then
@@ -119,9 +121,23 @@ Tab:AddButton({
         game:GetService("TeleportService"):Teleport(9364689381, LocalPlayer)
     end
 })
+
+Tab:AddButton({
+    Name = "Teleport to Hazard Course",
+    Callback = function()
+        game:GetService("TeleportService"):Teleport(9431811877, LocalPlayer)
+    end
+})
+
+Tab:AddButton({
+    Name = "Teleport to Poolrooms: Level 2",
+    Callback = function()
+        game:GetService("TeleportService"):Teleport(9289542174, LocalPlayer)
+    end
+})
     
 local Tab = Window:MakeTab({
-	Name = "Settings",
+	Name = "Misc",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -205,6 +221,17 @@ ESP:AddObjectListener(workspace, {
     CustomName = "Door"
 })
 
+Tab:AddButton({
+    Name = "Exit Level",
+    Callback = function()
+    for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+        if v.ClassName == "TouchTransmitter" and v.Parent ~= "HumanoidRootPart" and v.Name == "TouchInterest" then
+            firetouchinterest(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
+        end
+        end
+    end
+})
+
 ESP:Add(workspace.ENTITY_1, alreadyexisting)
 ESP:Add(workspace.ENTITY_DANCE, alreadyexisting)
 
@@ -216,6 +243,25 @@ ESP:AddObjectListener(workspace, {
     Type = "Model",
     Name = "ENTITY_1",
     CustomName = "ENTITY"
+})
+
+ESP:Add(workspace.EXIT, EXIT)
+ESP:AddObjectListener(workspace, {
+    Color = Color3.new(255, 0, 0),
+    Type = "Part",
+    Name = "EXIT",
+    CustomName = "EXIT"
+})
+
+Tab:AddButton({
+    Name = "Exit Level",
+    Callback = function()
+    for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+        if v.ClassName == "TouchTransmitter" and v.Parent ~= "HumanoidRootPart" and v.Name == "TouchInterest" then
+            firetouchinterest(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
+        end
+        end
+    end
 })
 
 Lib.prompt('WARNING', "Entity ESP is slightly buggy, re-add in Settings if you can't see the entities.", 15)
@@ -232,6 +278,18 @@ elseif game.PlaceId == 9193428368 then
 
 Lib.prompt('INFO', "No esp could be made here.", 10)
 Lib.prompt('INFO', "The elevator next to spawn is the exit.", 10)
+
+Tab:AddButton({
+    Name = "Exit Level",
+    Callback = function()
+    for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+        if v.ClassName == "TouchTransmitter" and v.Parent ~= "HumanoidRootPart" and v.Name == "TouchInterest" then
+            firetouchinterest(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
+        end
+        end
+    end
+})
+
 
 elseif game.PlaceId == 9359358716 then
     
@@ -263,6 +321,17 @@ Tab:AddButton({
     end
 })
 
+Tab:AddButton({
+    Name = "Exit Level",
+    Callback = function()
+    for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+        if v.ClassName == "TouchTransmitter" and v.Parent ~= "HumanoidRootPart" and v.Name == "TouchInterest" then
+            firetouchinterest(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
+        end
+        end
+    end
+})
+
 Notify({
     Description = " INFO ";
     Title = " No exit ESP could be made. Avoid entities and walk around until you find the exit.";
@@ -275,11 +344,33 @@ Lib.prompt('INFO', "No esp could be made here, since there's no entities.", 15.5
 
 Lib.prompt('INFO', "Exit is behind where you spawn.", 10)
 
+Tab:AddButton({
+    Name = "Exit Level",
+    Callback = function()
+    for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+        if v.ClassName == "TouchTransmitter" and v.Parent ~= "HumanoidRootPart" and v.Name == "TouchInterest" then
+            firetouchinterest(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
+        end
+        end
+    end
+})
+
 elseif game.PlaceId == 9195387779 then
     
 Lib.prompt('INFO', "No esp could be made here, since there's no entities.", 15)
 
 Lib.prompt('INFO', "Exit ESP could not be made, since it has a weird name in Dex.", 15)
+
+Tab:AddButton({
+    Name = "Exit Level",
+    Callback = function()
+    for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+        if v.ClassName == "TouchTransmitter" and v.Parent ~= "HumanoidRootPart" and v.Name == "TouchInterest" then
+            firetouchinterest(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
+        end
+        end
+    end
+})
 
 elseif game.PlaceId == 9289542174 then
     
@@ -290,9 +381,38 @@ ESP:AddObjectListener(workspace, {
     CustomName = "EXIT"
 })
 
+Tab:AddButton({
+    Name = "Refresh ESP",
+    Callback = function()
+    ESP:Add(workspace.Part, EXIT)
+    end
+})
+
+Tab:AddButton({
+    Name = "Exit Level",
+    Callback = function()
+    for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+        if v.ClassName == "TouchTransmitter" and v.Parent ~= "HumanoidRootPart" and v.Name == "TouchInterest" then
+            firetouchinterest(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
+        end
+        end
+    end
+})
+
 elseif game.PlaceId == 9280914973 then
 
 ESP:Add(workspace.EXIT, EXIT)
+
+Tab:AddButton({
+    Name = "Exit Level",
+    Callback = function()
+    for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+        if v.ClassName == "TouchTransmitter" and v.Parent ~= "HumanoidRootPart" and v.Name == "TouchInterest" then
+            firetouchinterest(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
+        end
+        end
+    end
+})
 
 elseif game.PlaceId == 8539953031 then
     
