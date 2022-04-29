@@ -35,6 +35,15 @@ local subgames = {
     9289542174
 }
 
+if table.find(subgames, cg) and syn then
+	
+game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
+    if State == Enum.TeleportState.Started then
+        syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/fheahdythdr/FloppaMods/main/Open%20Source%20Backrooms%20Entity%20ESP.lua'))()")
+    end
+end)
+end
+
 if table.find(subgames, cg) then
     
 local Window = OrionLib:MakeWindow({Name = "The Backrooms (K. Pixels)", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
