@@ -167,7 +167,7 @@ Tab:AddBind({
 })
 	
 task.wait(0.25)
-Bind:Set(Enum.KeyCode.RightControl)
+Bind:Set(Enum.KeyCode.RightShift)
 
 Tab:AddToggle({
 	Name = "Toggle Player ESP",
