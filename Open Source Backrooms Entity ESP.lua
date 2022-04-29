@@ -1,7 +1,3 @@
-if not game:IsLoaded() then
-repeat wait() until game:IsLoaded()
-end
-
 --[[
 
     Made with help from the Sirius discord server, aka the same people who made Orion.
@@ -13,6 +9,10 @@ end
     Orion UI Lib from the Sirius discord server.
 
 ]]--
+
+if not game:IsLoaded() then
+repeat wait() until game:IsLoaded()
+end
 
 local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/batusz/uilibrarys/main/AkaliNotifLib"))();
 local Notify = AkaliNotif.Notify;
@@ -273,7 +273,7 @@ Tab:AddButton({
     end
 })
 
-Lib.prompt('WARNING', "Entity ESP is slightly buggy, re-add in Settings if you can't see the entities.", 15)
+Lib.prompt('WARNING', "Entity ESP is slightly buggy, re-add in Misc if you can't see the entities.", 15)
 Lib.prompt('INFO', "You should see 1 entity.", 10)
 
 Tab:AddButton({
@@ -302,7 +302,7 @@ Tab:AddButton({
 
 elseif game.PlaceId == 9359358716 then
     
-Lib.prompt('WARNING', "Entity ESP is slightly buggy, re-add in Settings if you can't see the entities.", 15)
+Lib.prompt('WARNING', "Entity ESP is slightly buggy, re-add in Misc if you can't see the entities.", 15)
 Lib.prompt('INFO', "You should see 2 entities.", 10)
 
 ESP:AddObjectListener(workspace, {
