@@ -235,7 +235,7 @@ ESP:AddObjectListener(workspace, {
 Tab:AddButton({
     Name = "Exit Level (only works when esp loads first door)",
     Callback = function()
-	firetouchinterest(game:GetService("Players").LocalPlayer, game:GetService("Workspace")["door01_left_Body"].TouchInterest, 0)
+	firetouchinterest(game:GetService("Players").LocalPlayer, game:GetService("Workspace")["door01_left_Body"], 0)
     end
 })
 
