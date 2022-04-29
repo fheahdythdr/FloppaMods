@@ -173,6 +173,9 @@ Tab:AddToggle({
     ESP.Players = Value
 	end    
 })
+	
+Tab:AddLabel("Original script creator: fheahdythdr.")
+Tab:AddLabel("Discord username and tag is oogabooga#7914")
 
 Lib.prompt('INFO', "Default Orion hide keybind is RIGHT SHIFT.", 15)
 
