@@ -154,8 +154,8 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddBind({
-    Name = "Toggle Ui",
-    Default = Enum.KeyCode.RightShift,
+    Name = "Toggle UI",
+    Default = Enum.KeyCode.RightControl,
     Hold = false,
     Callback = function()
         if game:GetService("CoreGui").Orion.Enabled == true then
@@ -165,6 +165,9 @@ Tab:AddBind({
         end
     end    
 })
+	
+task.wait(0.25)
+Bind:Set(Enum.KeyCode.RightControl)
 
 Tab:AddToggle({
 	Name = "Toggle Player ESP",
