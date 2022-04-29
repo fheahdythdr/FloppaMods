@@ -10,9 +10,7 @@
 
 ]]--
 
-if not game:IsLoaded() then
-repeat wait() until game:IsLoaded()
-end
+wait(2)
 
 local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/batusz/uilibrarys/main/AkaliNotifLib"))();
 local Notify = AkaliNotif.Notify;
