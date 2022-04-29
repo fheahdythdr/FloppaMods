@@ -245,6 +245,7 @@ ESP:AddObjectListener(workspace, {
 })
 
 local dcfr = CFrame.new(103.583336, -48.875, 672.625)
+local sdump = CFrame.new(605.394348, -18.0952225, 248.928467)
 
 Tab:AddButton({
     Name = "Exit Level",
@@ -254,6 +255,16 @@ Tab:AddButton({
 	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = dcfr
     end
 })
+		
+Tab:AddButton({
+	Name = "Teleport to Spamton's Dumpster",
+	Callback = function()
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = sdump
+	wait(0.1)
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = sdump
+	end
+})
+
 
 ESP:Add(workspace.ENTITY_1, alreadyexisting)
 ESP:Add(workspace.ENTITY_DANCE, alreadyexisting)
