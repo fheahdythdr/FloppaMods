@@ -1,3 +1,7 @@
+if not game:IsLoaded() then
+repeat wait() until game:IsLoaded()
+end
+
 --[[
 
     Made with help from the Sirius discord server, aka the same people who made Orion.
