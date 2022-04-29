@@ -36,7 +36,7 @@ local subgames = {
     9289542174
 }
 
-if table.find(subgames, cg) and syn then
+--[[if table.find(subgames, cg) and syn then
 	
 game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
     if State == Enum.TeleportState.Started then
@@ -44,6 +44,7 @@ game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
     end
 end)
 end
+]]--
 
 if table.find(subgames, cg) then
     
