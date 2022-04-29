@@ -9,7 +9,6 @@
     Orion UI Lib from the Sirius discord server.
 
 ]]--
-wait("game:IsLoaded()")
 
 local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/batusz/uilibrarys/main/AkaliNotifLib"))();
 local Notify = AkaliNotif.Notify;
@@ -467,12 +466,3 @@ ESP:Add(workspace.Gman, g_man)
 end end
 ESP:Toggle(true)
 OrionLib:Init()
-
-if table.find(subgames, cg) and syn then
-	
-game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
-    if State == Enum.TeleportState.Started then
-        syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/fheahdythdr/FloppaMods/main/Open%20Source%20Backrooms%20Entity%20ESP.lua'))()")
-    end
-end)
-end
