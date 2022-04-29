@@ -10,7 +10,7 @@
 
 ]]--
 
-wait(2)
+wait(0.5)
 
 local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/batusz/uilibrarys/main/AkaliNotifLib"))();
 local Notify = AkaliNotif.Notify;
@@ -166,7 +166,7 @@ Tab:AddBind({
     end    
 })
 	
-task.wait(0.25)
+wait(0.25)
 Bind:Set(Enum.KeyCode.RightShift)
 
 Tab:AddToggle({
