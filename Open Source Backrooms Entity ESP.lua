@@ -24,20 +24,21 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local cg = game.PlaceId
 
 local subgames = {
-    8926741973,
-    9204234205,
-    9193428368,
-    9359358716,
-    9195387779,
-    9185104864,
-    9361563014,
-    9223234446,
-    9236784419,
-    9280914973,
-    9364689381,
-    9431811877,
-    9289542174,
-    9326578533
+	8926741973,
+	9204234205,
+	9193428368,
+	9359358716,
+	9195387779,
+	9185104864,
+	9361563014,
+	9223234446,
+	9236784419,
+	9280914973,
+	9364689381,
+	9431811877,
+	9289542174,
+	9326578533,
+	9196535285
 }
 
 if table.find(subgames, cg) then
@@ -45,16 +46,16 @@ if table.find(subgames, cg) then
 local Window = OrionLib:MakeWindow({Name = "The Backrooms (K. Pixels)", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
 
 local Tab = Window:MakeTab({
-    Name = "Teleports",
+    Name = "Main",
     Icon = "",
     PremiumOnly = false
 })
 
 Tab:AddButton({
-    Name = "Teleport to Poolrooms",
-    Callback = function()
-        game:GetService("TeleportService"):Teleport(9195387779, LocalPlayer)
-    end
+	Name = "Teleport to Poolrooms",
+	Callback = function()
+		game:GetService("TeleportService"):Teleport(9195387779, LocalPlayer)
+	end
 })
 
 Tab:AddButton({
@@ -173,40 +174,41 @@ Tab:AddToggle({
     ESP.Players = Value
 	end    
 })
-	
-Tab:AddLabel("Original script creator: fheahdythdr.")
-Tab:AddLabel("Discord username and tag is oogabooga#7914")
-	
---[[
-	
-Tab:AddLabel("Script modified by: _________")
-Tab:AddLabel("Discord username and tag is _________")
 
-use this if you want to add credits for yourself after modifying.
-	
-]]--
+Tab:AddToggle({
+	Name = "Entity/Exit ESP",
+	Default = false,
+	Callback = function(Value)
+    ESP.EE_ESP = Value
+	end    
+})
+
 
 Lib.prompt('INFO', "Default Orion hide keybind is RIGHT SHIFT.", 15)
 
 local alreadyexisting = {
     Color = Color3.new(255, 0, 0),
     Name = "ENTITY",
-    RenderInNil = true
+    RenderInNil = true,
+    IsEnabled = "EE_ESP"
 }
 
 local EXIT = {
     Color = Color3.new(0, 0, 255),
-    Name = "EXIT"
+    Name = "EXIT",
+    IsEnabled = "EE_ESP"
 }
 
 local cnpc = {
     Color = Color3.new(0, 125, 255),
-    Name = "COMBINE"
+    Name = "COMBINE",
+    IsEnabled = "EE_ESP"
 }
 
 local g_man = {
     Color = Color3.new(0, 255, 0),
-    Name = "GMAN"
+    Name = "GMAN",
+    IsEnabled = "EE_ESP"
 }
 
 if game.PlaceId == 8926741973 then
@@ -241,11 +243,21 @@ ESP:AddObjectListener(workspace, {
     Color = Color3.new(0, 255, 255),
     Type = "MeshPart",
     Name = "door01_left_Body",
-    CustomName = "Door"
+    CustomName = "Door",
+    IsEnabled = "EE_ESP"
+})
+ESP:AddObjectListener(workspace, {
+    Color = Color3.new(100, 255, 0),
+    Type = "Model",
+    Name = "de_train_securityguard",
+    CustomName = "Security Guard"
 })
 
 local dcfr = CFrame.new(103.583336, -48.875, 672.625)
 local sdump = CFrame.new(605.394348, -18.0952225, 248.928467)
+local desg = CFrame.new(-136.011383, 0.889741182, -605.963318)
+local nlvl = CFrame.new(385.718597, -22.6462479, 258.561096)
+local iarea = CFrame.new(-330.13913, 5.25512266, -209.538269)
 
 Tab:AddButton({
     Name = "Exit Level",
@@ -255,7 +267,7 @@ Tab:AddButton({
 	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = dcfr
     end
 })
-		
+
 Tab:AddButton({
 	Name = "Teleport to Spamton's Dumpster",
 	Callback = function()
@@ -265,6 +277,31 @@ Tab:AddButton({
 	end
 })
 
+Tab:AddButton({
+	Name = "Teleport to Security Guard",
+	Callback = function()
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = desg
+	wait(0.1)
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = desg
+	end
+})
+
+Tab:AddButton({
+	Name = "Teleport to Next Level",
+	Callback = function()
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = nlvl
+	wait(0.1)
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = nlvl
+	end
+})
+Tab:AddButton({
+	Name = 'Get "The Iconic Area" Badge',
+	Callback = function()
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = iarea
+	wait(0.1)
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = iarea
+	end
+})
 
 ESP:Add(workspace.ENTITY_1, alreadyexisting)
 ESP:Add(workspace.ENTITY_DANCE, alreadyexisting)
@@ -281,7 +318,7 @@ ESP:AddObjectListener(workspace, {
 
 ESP:Add(workspace.EXIT, EXIT)
 ESP:AddObjectListener(workspace, {
-    Color = Color3.new(255, 0, 0),
+    Color = Color3.new(255, 0, 255),
     Type = "Part",
     Name = "EXIT",
     CustomName = "EXIT"
@@ -525,4 +562,3 @@ ESP:Add(workspace.Gman, g_man)
 
 end end
 ESP:Toggle(true)
-OrionLib:Init()
