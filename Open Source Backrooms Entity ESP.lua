@@ -8,6 +8,10 @@
     Akali Notif Lib (Can't find original creator.)
     Orion UI Lib from the Sirius discord server.
 
+
+    Made by me (github link https://github.com/fheahdythdr)
+    If you do end up using this, please atleast change something. It's open source, so you don't have to, but it'd be nice if you either learn something from this or add compatability patches.
+
 ]]--
 
 local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/batusz/uilibrarys/main/AkaliNotifLib"))();
