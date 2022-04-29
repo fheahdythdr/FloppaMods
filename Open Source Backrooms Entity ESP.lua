@@ -231,7 +231,7 @@ ESP:AddObjectListener(workspace, {
 })
 
 Tab:AddButton({
-    Name = "Exit Level",
+    Name = "Exit Level (only works when esp loads first door)",
     Callback = function()
     for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
         if v.ClassName == "TouchTransmitter" and v.Parent ~= "HumanoidRootPart" and v.Name == "TouchInterest" then
