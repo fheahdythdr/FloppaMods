@@ -10,6 +10,8 @@
 
 ]]--
 
+local dcfr = game:GetService("Workspace")["tools/toolswhite"].CFrame
+
 local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/batusz/uilibrarys/main/AkaliNotifLib"))();
 local Notify = AkaliNotif.Notify;
 local ESP = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kiriot22/ESP-Lib/main/ESP.lua"))()
@@ -224,7 +226,7 @@ ESP:AddObjectListener(workspace, {
 Tab:AddButton({
     Name = "Exit Level (only works when esp loads first door)",
     Callback = function()
-	firetouchinterest(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, game:GetService("Workspace")["tools/toolswhite"], 0)
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = dcfr
     end
 })
 
