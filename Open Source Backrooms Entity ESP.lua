@@ -183,17 +183,14 @@ Tab:AddToggle({
 	end    
 })
 	
-Tab:AddLabel("Original script maker is https://github.com/fheahdythdr")
-	
-Tab:AddLabel("Add me on discord if you have any issues, oogabooga#7914")
-	
+Tab:AddLabel("Original script creator: fheahdythdr.")
+Tab:AddLabel("Discord username and tag is oogabooga#7914")
+
 --[[
 	
-Tab:AddLabel("Label")
-	
-Tab:AddLabel("Label")
-	
-ayo if you wanna add your own credits here's the addlabel things here already
+Tab:AddLabel("Script modified by: _________")
+Tab:AddLabel("Discord username and tag is _________")
+use this if you want to add credits for yourself after modifying.
 	
 ]]--
 
