@@ -483,7 +483,7 @@ ESP:AddObjectListener(workspace, {
     Color = Color3.new(255, 0, 0),
     Type = "Part",
     Name = "Part",
-    CustomName = "EXIT"
+    CustomName = "EXIT",
     IsEnabled = "EX_ESP"
 })
 
