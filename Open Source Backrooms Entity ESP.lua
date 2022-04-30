@@ -176,10 +176,26 @@ Tab:AddToggle({
 })
 
 Tab:AddToggle({
-	Name = "Entity/Exit ESP",
+	Name = "Exit ESP",
 	Default = false,
 	Callback = function(Value)
-    ESP.EE_ESP = Value
+    	ESP.EX_ESP = Value
+	end    
+})
+	
+Tab:AddToggle({
+	Name = "Entity ESP",
+	Default = false,
+	Callback = function(Value)
+    	ESP.ENT_ESP = Value
+	end    
+})
+	
+Tab:AddToggle({
+	Name = "Other ESP",
+	Default = false,
+	Callback = function(Value)
+    	ESP.MISC_ESP = Value
 	end    
 })
 	
@@ -201,25 +217,25 @@ local alreadyexisting = {
     Color = Color3.new(255, 0, 0),
     Name = "ENTITY",
     RenderInNil = true,
-    IsEnabled = "EE_ESP"
+    IsEnabled = "ENT_ESP"
 }
 
 local EXIT = {
     Color = Color3.new(0, 0, 255),
     Name = "EXIT",
-    IsEnabled = "EE_ESP"
+    IsEnabled = "EX_ESP"
 }
 
 local cnpc = {
     Color = Color3.new(0, 125, 255),
     Name = "COMBINE",
-    IsEnabled = "EE_ESP"
+    IsEnabled = "ENT_ESP"
 }
 
 local g_man = {
     Color = Color3.new(0, 255, 0),
     Name = "GMAN",
-    IsEnabled = "EE_ESP"
+    IsEnabled = "ENT_ESP"
 }
 
 if game.PlaceId == 8926741973 then
@@ -241,13 +257,15 @@ ESP:AddObjectListener(workspace, {
     Type = "Model",
     Name = "ENTITY_1",
     CustomName = "ENTITY"
+    IsEnabled = "ENT_ESP"
 })
 
 ESP:AddObjectListener(workspace, {
     Color = Color3.new(255, 0, 0),
     Type = "Model",
     Name = "ENTITY_DANCE",
-    CustomName = "ENTITY"
+    CustomName = "ENTITY",
+    IsEnabled = "ENT_ESP"
 })
 
 ESP:AddObjectListener(workspace, {
@@ -255,13 +273,14 @@ ESP:AddObjectListener(workspace, {
     Type = "MeshPart",
     Name = "door01_left_Body",
     CustomName = "Door",
-    IsEnabled = "EE_ESP"
+    IsEnabled = "EX_ESP"
 })
 ESP:AddObjectListener(workspace, {
     Color = Color3.new(100, 255, 0),
     Type = "Model",
     Name = "de_train_securityguard",
-    CustomName = "Security Guard"
+    CustomName = "Security Guard",
+    IsEnabled = "MISC_ESP"
 })
 
 local dcfr = CFrame.new(103.583336, -48.875, 672.625)
@@ -324,7 +343,8 @@ ESP:AddObjectListener(workspace, {
     Color = Color3.new(255, 0, 0),
     Type = "Model",
     Name = "ENTITY_1",
-    CustomName = "ENTITY"
+    CustomName = "ENTITY",
+    IsEnabled = "ENT_ESP"
 })
 
 ESP:Add(workspace.EXIT, EXIT)
@@ -332,7 +352,8 @@ ESP:AddObjectListener(workspace, {
     Color = Color3.new(255, 0, 255),
     Type = "Part",
     Name = "EXIT",
-    CustomName = "EXIT"
+    CustomName = "EXIT",
+    IsEnabled = "EX_ESP"
 })
 
 Tab:AddButton({
@@ -383,13 +404,15 @@ ESP:AddObjectListener(workspace, {
     Type = "Model",
     Name = "ENTITY_1",
     CustomName = "ENTITY"
+    IsEnabled = "ENT_ESP"
 })
 
 ESP:AddObjectListener(workspace, {
     Color = Color3.new(255, 0, 0),
     Type = "Model",
     Name = "ENTITY_2",
-    CustomName = "ENTITY"
+    CustomName = "ENTITY",
+    IsEnabled = "ENT_ESP"
 })
 
 ESP:Add(workspace.ENTITY_1, alreadyexisting)
@@ -461,6 +484,7 @@ ESP:AddObjectListener(workspace, {
     Type = "Part",
     Name = "Part",
     CustomName = "EXIT"
+    IsEnabled = "EX_ESP"
 })
 
 Tab:AddButton({
@@ -526,7 +550,8 @@ ESP:AddObjectListener(workspace, {
     Color = Color3.new(255, 0, 0),
     Type = "Model",
     Name = "Backrooms Partygoer",
-    CustomName = "PARTYGOER"
+    CustomName = "PARTYGOER",
+    IsEnabled = "ENT_ESP"
 })
 
 elseif game.PlaceId == 3227921645 then
@@ -551,21 +576,24 @@ ESP:AddObjectListener(workspace, {
     Color = Color3.new(255, 0, 0),
     Type = "Model",
     Name = "CombineNPC",
-    CustomName = "COMBINE"
+    CustomName = "COMBINE",
+    IsEnabled = "ENT_ESP"
 })
 
 ESP:AddObjectListener(workspace, {
     Color = Color3.new(255, 0, 0),
     Type = "Model",
     Name = "Gman",
-    CustomName = "GMAN"
+    CustomName = "GMAN",
+    IsEnabled = "ENT_ESP"
 })
 
 ESP:AddObjectListener(workspace, {
     Color = Color3.new(255, 0, 0),
     Type = "Part",
     Name = "Portal",
-    CustomName = "Portal"
+    CustomName = "Portal",
+    IsEnabled = "EX_ESP"
 })
 
 ESP:Add(workspace.NonHostileCombineNPC, cnpc)
