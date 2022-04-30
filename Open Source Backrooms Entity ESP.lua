@@ -182,6 +182,20 @@ Tab:AddToggle({
     ESP.EE_ESP = Value
 	end    
 })
+	
+Tab:AddLabel("Original script maker is https://github.com/fheahdythdr")
+	
+Tab:AddLabel("Add me on discord if you have any issues, oogabooga#7914")
+	
+--[[
+	
+Tab:AddLabel("Label")
+	
+Tab:AddLabel("Label")
+	
+ayo if you wanna add your own credits here's the addlabel things here already
+	
+]]--
 
 
 Lib.prompt('INFO', "Default Orion hide keybind is RIGHT SHIFT.", 15)
