@@ -256,7 +256,7 @@ ESP:AddObjectListener(workspace, {
     Color = Color3.new(255, 0, 0),
     Type = "Model",
     Name = "ENTITY_1",
-    CustomName = "ENTITY"
+    CustomName = "ENTITY",
     IsEnabled = "ENT_ESP"
 })
 
