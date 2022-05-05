@@ -200,7 +200,7 @@ Tab:AddToggle({
 })
 	
 Tab:AddLabel("Original script creator: fheahdythdr.")
-Tab:AddLabel("Discord username and tag is oogabooga#7914")
+Tab:AddLabel("Discord username and tag is chad gaming#7914")
 
 --[[
 	
