@@ -666,6 +666,13 @@ Tab:AddButton({
         game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId,game.JobId)
     end
 })
+	
+Tab:AddButton({
+    Name = "Join our Discord!",
+    Callback = function()
+        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/fheahdythdr/legendary-train/main/discord%20invite.lua"))()
+    end
+})
 
 local Tab = Window:MakeTab({
     Name = "Modifying",
