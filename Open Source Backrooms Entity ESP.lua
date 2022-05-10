@@ -38,7 +38,8 @@ local subgames = {
 	9431811877,
 	9289542174,
 	9326578533,
-	9196535285
+	9196535285,
+	9590705492
 }
 
 if table.find(subgames, cg) then
@@ -146,6 +147,13 @@ Tab:AddButton({
     Name = "Teleport to Level !",
     Callback = function()
         game:GetService("TeleportService"):Teleport(9326578533, LocalPlayer)
+    end
+})
+
+Tab:AddButton({
+    Name = "Teleport to Level 434",
+    Callback = function()
+        game:GetService("TeleportService"):Teleport(9590705492, LocalPlayer)
     end
 })
     
@@ -598,6 +606,17 @@ ESP:AddObjectListener(workspace, {
 
 ESP:Add(workspace.NonHostileCombineNPC, cnpc)
 ESP:Add(workspace.Gman, g_man)
+
+elseif game.PlaceId == 9590705492 then
+
+Tab:AddButton({
+    Name = "Exit Level",
+    Callback = function()
+    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(63.609375, -37.8332214, -62.0799789)
+    end
+})
+
+Lib.prompt('INFO', "No entities are here.", 10)
 
 end end
 ESP:Toggle(true)
