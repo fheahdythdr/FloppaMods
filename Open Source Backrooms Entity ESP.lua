@@ -622,7 +622,7 @@ end
 ESP:Toggle(true)
 
 local Tab = Window:MakeTab({
-    Name = "Misc/Other Scripts",
+    Name = "Other Scripts",
     Icon = "",
     PremiumOnly = false
 })
