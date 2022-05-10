@@ -618,7 +618,69 @@ Tab:AddButton({
 })
 
 Lib.prompt('INFO', "No entities are here.", 10)
-
-end end
+end
 ESP:Toggle(true)
+
+local Tab = Window:MakeTab({
+    Name = "Misc/Other Scripts",
+    Icon = "",
+    PremiumOnly = false
+})
+
+Tab:AddButton({
+    Name = "Infinite Yield",
+    Callback = function()
+        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Infinite-Store/Infinite-Store/main/main.lua"))()
+    end
+})
+
+Tab:AddButton({
+    Name = "Fate's Admin",
+    Callback = function()
+        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))()
+    end
+})
+
+Tab:AddButton({
+    Name = "Mollermethod",
+    Callback = function()
+        			loadstring(game:HttpGet 'https://mthd.ml') {
+				bracket_toggle = Enum.KeyCode.LeftBracket;
+				debug = false;
+				volume = 5;
+				bracket_external = false;
+			theme = {
+				accent = "#ff4539";
+				background = "#1c1c1c";
+				foreground = "#f0f6fc";
+			};
+		}
+end
+})
+
+Tab:AddLabel("Mollermethod's keybind is Left Bracket, aka [")
+
+Tab:AddButton({
+    Name = "Rejoin Game",
+    Callback = function()
+        game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId,game.JobId)
+    end
+})
+
+local Tab = Window:MakeTab({
+    Name = "Modifying",
+    Icon = "",
+    PremiumOnly = false
+})
+
+Tab:AddParagraph("How to modify this script","Hello there! First off, use Dark Dex (linked below) to find CFrames of exits and names of entities, then modify accordingly.")
+
+Tab:AddButton({
+    Name = "Dark Dex",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/fheahdythdr/legendary-train/main/dark%20dex.lua"))()
+    end
+})
+
 OrionLib:Init()
+end
