@@ -1,5 +1,4 @@
 --[[
-
     Made with help from the Sirius discord server, aka the same people who made Orion.
     
     Libraries used:
@@ -7,11 +6,8 @@
     BoredStuff2's (i think) Notification Lib
     Akali Notif Lib (Can't find original creator.)
     Orion UI Lib from the Sirius discord server.
-
-
     Made by me (github link https://github.com/fheahdythdr)
     If you do end up using this, please atleast change something. It's open source, so you don't have to, but it'd be nice if you either learn something from this or add compatability patches.
-
 ]]--
 
 local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/batusz/uilibrarys/main/AkaliNotifLib"))();
@@ -40,7 +36,8 @@ local subgames = {
 	9326578533,
 	9196535285,
 	9590705492,
-	8539953031
+	8539953031,
+	9595282079
 }
 
 if table.find(subgames, cg) then
@@ -618,6 +615,27 @@ Tab:AddButton({
 })
 
 Lib.prompt('INFO', "No entities are here.", 10)
+
+elseif game.PlaceId == 9595282079 then
+
+ESP:AddObjectListener(workspace, {
+    Color = Color3.new(255, 0, 0),
+    Type = "Part",
+    Name = "Part",
+    CustomName = "EXIT",
+    IsEnabled = "EX_ESP"
+})
+
+ESP:Add(workspace.Part, EXIT)
+
+Tab:AddButton({
+    Name = "Exit Level",
+    Callback = function()
+    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-155.5, 4.00000381, 118.636024)
+    end
+})
+
+
 end
 ESP:Toggle(true)
 
@@ -690,14 +708,4 @@ Tab:AddButton({
 })
 
 OrionLib:Init()
-	
-	local label
-
-for i,v in pairs(game:GetService("CoreGui").Orion:GetDescendants()) do
-    if v:IsA("TextLabel") and v.Text == "Standard" then
-        label = v
-    end
-end
-
-label.Text = "Wanderer"
 end
