@@ -690,4 +690,14 @@ Tab:AddButton({
 })
 
 OrionLib:Init()
+	
+	local label
+
+for i,v in pairs(game:GetService("CoreGui").Orion:GetDescendants()) do
+    if v:IsA("TextLabel") and v.Text == "Standard" then
+        label = v
+    end
+end
+
+label.Text = "Wanderer"
 end
