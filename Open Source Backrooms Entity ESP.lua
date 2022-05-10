@@ -623,7 +623,7 @@ ESP:Toggle(true)
 
 local Tab = Window:MakeTab({
     Name = "Other Scripts",
-    Icon = "",
+    Icon = "rbxassetid://5822168115",
     PremiumOnly = false
 })
 
@@ -676,7 +676,7 @@ Tab:AddButton({
 
 local Tab = Window:MakeTab({
     Name = "Modifying",
-    Icon = "",
+    Icon = "rbxassetid://4498590361",
     PremiumOnly = false
 })
 
