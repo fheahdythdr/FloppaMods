@@ -17,9 +17,9 @@ local Lib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoredStu
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local cg = game.PlaceId
+cg = game.PlaceId
 
-local subgames = {
+subgames = {
 	8926741973,
 	9204234205,
 	9193428368,
