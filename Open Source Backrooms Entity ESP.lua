@@ -37,7 +37,8 @@ subgames = {
 	9196535285,
 	9590705492,
 	8539953031,
-	9595282079
+	9595282079,
+	9606387886
 }
 
 if table.find(subgames, cg) then
@@ -152,6 +153,13 @@ Tab:AddButton({
     Name = "Teleport to Level 434",
     Callback = function()
         game:GetService("TeleportService"):Teleport(9590705492, LocalPlayer)
+    end
+})
+
+Tab:AddButton({
+    Name = "Teleport to The Leanrooms",
+    Callback = function()
+        game:GetService("TeleportService"):Teleport(9606387886, LocalPlayer)
     end
 })
     
@@ -634,7 +642,19 @@ Tab:AddButton({
     game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-155.5, 4.00000381, 118.636024)
     end
 })
+		
+elseif game.PlaceId == 9606387886 then
+	
+ESP:AddObjectListener(workspace, {
+    Color = Color3.new(255, 0, 0),
+    Type = "Model",
+    Name = "ENTITY_DANCE",
+    CustomName = "Entity",
+    IsEnabled = "ENT_ESP"
+})
 
+ESP:Add(workspace.ENTITY_DANCE, alreadyexisting)
+ESP:Add(workspace.Part, EXIT)
 
 end
 ESP:Toggle(true)
