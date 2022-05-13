@@ -24,6 +24,14 @@ Tab:AddToggle({
     end    
 })
 
+Tab:AddToggle({
+    Name = "Toggle ESP",
+    Default = false,
+    Callback = function(Value)
+    ESP:Toggle(Value)
+    end    
+})
+
 Tab:AddBind({
     Name = "Toggle UI",
     Default = Enum.KeyCode.RightShift,
@@ -71,6 +79,4 @@ ESP:AddObjectListener(workspace.Players["Bright orange"], {
     IsEnabled = "OrangeToggle"
 })
 
-
-ESP:Toggle(true)
 OrionLib:Init()
