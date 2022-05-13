@@ -70,3 +70,9 @@ ESP:AddObjectListener(workspace.Players["Bright orange"], {
 
 ESP:Toggle(true)
 OrionLib:Init()
+OrionLib:MakeNotification({
+	Name = "Keybind",
+	Content = "Standard keybind is Right Shift",
+	Image = "",
+	Time = 7.5
+})
