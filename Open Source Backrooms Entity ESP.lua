@@ -254,17 +254,12 @@ local g_man = {
 
 if game.PlaceId == 8926741973 then
 
-Tab:AddButton({
-    Name = "Refresh ESP",
-    Callback = function()
     while true do
     wait(0.25)
     ESP:Add(workspace.ENTITY_1, alreadyexisting)
     ESP:Add(workspace.ENTITY_DANCE, alreadyexisting)
-    end end
-})
+    end
  
-Lib.prompt('WARNING', "Entity ESP is slightly buggy, re-add in Settings if you can't see the entities.", 15)
 Lib.prompt('INFO', "You should see 2 entities.", 15)
 
 
@@ -383,15 +378,13 @@ Tab:AddButton({
     end
 })
 
-Lib.prompt('WARNING', "Entity ESP is slightly buggy, re-add in Misc if you can't see the entities.", 15)
 Lib.prompt('INFO', "You should see 1 entity.", 10)
 
-Tab:AddButton({
-    Name = "Refresh ESP",
-    Callback = function()
-    ESP:Add(workspace.ENTITY_1, alreadyexisting)
-    end
-})
+while true do
+wait(0.25)
+ESP:Add(workspace.ENTITY_1, alreadyexisting)
+end
+
 
 elseif game.PlaceId == 9193428368 then
 
@@ -503,14 +496,10 @@ ESP:AddObjectListener(workspace, {
     IsEnabled = "EX_ESP"
 })
 
-Tab:AddButton({
-    Name = "Refresh ESP",
-    Callback = function()
     while true do
         wait(0.25)
     ESP:Add(workspace.Part, EXIT)
-    end end
-})
+    end
 
 Tab:AddButton({
     Name = "Exit Level",
@@ -657,9 +646,6 @@ ESP:AddObjectListener(workspace, {
     IsEnabled = "ENT_ESP"
 })
 
-Tab:AddButton({
-    Name = "Refresh ESP",
-    Callback = function()
     while true do
     wait(0.25)
     ESP:Add(workspace.ENTITY_DANCE, alreadyexisting)
@@ -671,8 +657,6 @@ Tab:AddButton({
     IsEnabled = "ENT_ESP"
 })
 end
-    end
-})
 
 ESP:Add(workspace.ENTITY_DANCE, alreadyexisting)
 ESP:Add(workspace.Part, EXIT)
