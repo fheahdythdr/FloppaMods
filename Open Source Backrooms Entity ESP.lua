@@ -652,11 +652,18 @@ ESP:AddObjectListener(workspace, {
     CustomName = "Entity",
     IsEnabled = "ENT_ESP"
 })
-		
+
 Tab:AddButton({
     Name = "Refresh ESP",
     Callback = function()
     ESP:Add(workspace.ENTITY_DANCE, alreadyexisting)
+    ESP:AddObjectListener(workspace, {
+    Color = Color3.new(255, 0, 0),
+    Type = "Model",
+    Name = "ENTITY_DANCE",
+    CustomName = "Entity",
+    IsEnabled = "ENT_ESP"
+})
     end
 })
 
