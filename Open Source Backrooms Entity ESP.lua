@@ -258,6 +258,7 @@ Tab:AddButton({
     Name = "Refresh ESP",
     Callback = function()
     while true do
+    wait(0.25)
     ESP:Add(workspace.ENTITY_1, alreadyexisting)
     ESP:Add(workspace.ENTITY_DANCE, alreadyexisting)
     end end
