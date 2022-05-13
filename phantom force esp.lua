@@ -11,6 +11,8 @@ local Tab = Window:MakeTab({
 Tab:AddToggle({
     Name = "Toggle Names",
     Default = false,
+    Save = true,
+    Flag = "Names",
     Callback = function(Value)
     ESP.Names = Value
     end    
@@ -19,6 +21,8 @@ Tab:AddToggle({
 Tab:AddToggle({
     Name = "Toggle Tracers",
     Default = false,
+    Save = true,
+    Flag = "Tracers",
     Callback = function(Value)
     ESP.Tracers = Value
     end    
@@ -27,6 +31,8 @@ Tab:AddToggle({
 Tab:AddToggle({
     Name = "Toggle ESP",
     Default = false,
+    Save = true,
+    Flag = "ESP",
     Callback = function(Value)
     ESP:Toggle(Value)
     end    
