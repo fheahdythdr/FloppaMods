@@ -43,7 +43,7 @@ subgames = {
 
 if table.find(subgames, cg) then
     
-local Window = OrionLib:MakeWindow({Name = "The Backrooms (K. Pixels)", HidePremium = false, SaveConfig = true, ConfigFolder = "shitty backrooms esp"})
+local Window = OrionLib:MakeWindow({Name = "A Wanderer's Utilities", HidePremium = false, SaveConfig = true, ConfigFolder = "shitty backrooms esp"})
 
 local Tab = Window:MakeTab({
     Name = "Game Teleports",
