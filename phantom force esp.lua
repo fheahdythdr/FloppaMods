@@ -74,14 +74,14 @@ end)
 ESP:AddObjectListener(workspace.Players["Bright blue"], {
     CustomName = "Player",
     Name = "Player",
-    Color = Color3.fromRGB(0, 0, 255),
+    Color = Color3.fromRGB(255, 0, 0),
     IsEnabled = "BlueToggle"
 })
 
 ESP:AddObjectListener(workspace.Players["Bright orange"], {
     CustomName = "Player",
     Name = "Player",
-    Color = Color3.fromRGB(255, 125, 0),
+    Color = Color3.fromRGB(255, 0, 0),
     IsEnabled = "OrangeToggle"
 })
 
