@@ -43,7 +43,7 @@ subgames = {
 
 if table.find(subgames, cg) then
     
-local Window = OrionLib:MakeWindow({Name = "The Backrooms (K. Pixels)", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "The Backrooms (K. Pixels)", HidePremium = false, SaveConfig = true, ConfigFolder = "shitty backrooms esp"})
 
 local Tab = Window:MakeTab({
     Name = "Game Teleports",
@@ -172,6 +172,8 @@ Tab:AddBind({
     Name = "Toggle UI",
     Default = Enum.KeyCode.RightShift,
     Hold = false,
+    Save = true,
+    Flag = "UIToggle",
     Callback = function()
         if game:GetService("CoreGui").Orion.Enabled == true then
         game:GetService("CoreGui").Orion.Enabled = false
@@ -184,6 +186,8 @@ Tab:AddBind({
 Tab:AddToggle({
 	Name = "Toggle Player ESP",
 	Default = false,
+        Save = true,
+	Flag = "PlayerESP",
 	Callback = function(Value)
     ESP.Players = Value
 	end    
@@ -192,6 +196,8 @@ Tab:AddToggle({
 Tab:AddToggle({
 	Name = "Exit ESP",
 	Default = false,
+	Save = true,
+	Flag = "ExitESP",
 	Callback = function(Value)
     	ESP.EX_ESP = Value
 	end    
@@ -200,6 +206,8 @@ Tab:AddToggle({
 Tab:AddToggle({
 	Name = "Entity ESP",
 	Default = false,
+	Save = true,
+        Flag = "EntityESP",
 	Callback = function(Value)
     	ESP.ENT_ESP = Value
 	end    
@@ -208,6 +216,8 @@ Tab:AddToggle({
 Tab:AddToggle({
 	Name = "Other ESP",
 	Default = false,
+	Save = true,
+	Flag = "OtherESP",
 	Callback = function(Value)
     	ESP.MISC_ESP = Value
 	end    
@@ -582,7 +592,7 @@ ESP:Add(workspace.ExitTriggers.TeleTrigger3, EXIT)
 ESP:Add(workspace.ExitTriggers.AlternateExitTrigger, EXIT)
 ESP:Add(workspace.ExitTriggers.TeleTrigger1, EXIT)
 
-Lib.prompt('INFO', "I will not be making ESP for any sub-game here, as my goal was to make ESP for StopPlaying_MyGames' The Backrooms game.", 20)
+Lib.prompt('INFO', "I will not be making ESP for any sub-game here, as my goal was to make ESP for the starting The Backrooms game.", 20)
 
 elseif game.PlaceId == 9364689381 then
 game:GetService("CoreGui").Orion.Enabled = false
