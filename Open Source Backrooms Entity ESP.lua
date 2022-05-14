@@ -592,7 +592,7 @@ ESP:Add(workspace.ExitTriggers.TeleTrigger3, EXIT)
 ESP:Add(workspace.ExitTriggers.AlternateExitTrigger, EXIT)
 ESP:Add(workspace.ExitTriggers.TeleTrigger1, EXIT)
 
-Lib.prompt('INFO', "I will not be making ESP for any sub-game here, as my goal was to make ESP for the starting The Backrooms game.", 20)
+Lib.prompt('INFO', "I will not be making ESP for any sub-game here, as my goal was to make ESP for CertifiedJerkFace123/Gamer's The Backrooms game.", 20)
 
 elseif game.PlaceId == 9364689381 then
 game:GetService("CoreGui").Orion.Enabled = false
