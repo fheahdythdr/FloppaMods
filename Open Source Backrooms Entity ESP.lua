@@ -254,12 +254,19 @@ local g_man = {
 
 if game.PlaceId == 8926741973 then
 
-    while true do
+		
+Tab:AddButton({
+    Name = "Refresh ESP (while true do loop)",
+    Callback = function()
+        while true do
     wait(0.25)
     ESP:Add(workspace.ENTITY_1, alreadyexisting)
     ESP:Add(workspace.ENTITY_DANCE, alreadyexisting)
     end
  
+    end
+})
+
 Lib.prompt('INFO', "You should see 2 entities.", 15)
 
 
@@ -380,10 +387,15 @@ Tab:AddButton({
 
 Lib.prompt('INFO', "You should see 1 entity.", 10)
 
+Tab:AddButton({
+    Name = "Refresh ESP (while true do loop)",
+    Callback = function()		
 while true do
 wait(0.25)
 ESP:Add(workspace.ENTITY_1, alreadyexisting)
 end
+end
+})
 
 
 elseif game.PlaceId == 9193428368 then
@@ -496,10 +508,7 @@ ESP:AddObjectListener(workspace, {
     IsEnabled = "EX_ESP"
 })
 
-    while true do
-        wait(0.25)
     ESP:Add(workspace.Part, EXIT)
-    end
 
 Tab:AddButton({
     Name = "Exit Level",
@@ -646,6 +655,9 @@ ESP:AddObjectListener(workspace, {
     IsEnabled = "ENT_ESP"
 })
 
+Tab:AddButton({
+    Name = "Refresh ESP (while true do loop)",
+    Callback = function()
     while true do
     wait(0.25)
     ESP:Add(workspace.ENTITY_DANCE, alreadyexisting)
@@ -657,6 +669,8 @@ ESP:AddObjectListener(workspace, {
     IsEnabled = "ENT_ESP"
 })
 end
+end
+})
 
 ESP:Add(workspace.ENTITY_DANCE, alreadyexisting)
 ESP:Add(workspace.Part, EXIT)
