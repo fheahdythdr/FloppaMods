@@ -140,14 +140,14 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-    Name = "Teleport to Chapter 1 (Solo Lobby)",
+    Name = "Teleport to Chapter 1 (Exploiter/Private Lobby)",
     Callback = function()
         game:GetService("TeleportService"):Teleport(5202597474, LocalPlayer)
     end
 })
 
 Tab:AddButton({
-    Name = "Teleport to Chapter 2 (Solo Lobby, Origin)",
+    Name = "Teleport to Chapter 2 (Exploiter/Private Lobby, Origin)",
     Callback = function()
         game:GetService("TeleportService"):Teleport(6996352354, LocalPlayer)
     end
@@ -253,9 +253,11 @@ Tab:AddButton({
     Name = "Teleport to Poolrooms",
     Callback = function()
         if pid ~= 9341597882 then
+	    Lib.prompt("info", "oi ur not in the right game, sending you over", 15)
+	    wait(7.5)
             game:GetService("TeleportService"):Teleport(9341597882, LocalPlayer)
             if syn then
-                syn.queue_on_teleport('if not game.IsLoaded() then wait("game.IsLoaded()") game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1614.55, 193.498, 15.7132)')
+                syn.queue_on_teleport('wait(10) game:GetService("Players").LocalPlayer:WaitForChild("Character") end game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1614.55, 193.498, 15.7132)')
             end
         elseif pid == 9341597882 then
         game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1614.55, 193.498, 15.7132)
@@ -372,7 +374,7 @@ ESP:AddObjectListener(workspace.Totems, {
 })
 
 Tab2:AddButton({
-    Name = "Add Objects to ESP (underground hideout",
+    Name = "Add Objects to ESP (underground hideout)",
     Callback = function()
         
     ESP:AddObjectListener(workspace.Map.UndergroundHidout, {
