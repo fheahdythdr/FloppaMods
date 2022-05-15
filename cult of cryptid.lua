@@ -397,7 +397,8 @@ ESP:AddObjectListener(workspace.Cryptids, {
 Tab2:AddButton({
     Name = "Refresh cryptids ESP",
     Callback = function()
-while true do 
+while true do
+wait(0.1)
 ESP:AddObjectListener(workspace.Cryptids, {
     Color = Color3.fromRGB(255, 0, 0),
 })
