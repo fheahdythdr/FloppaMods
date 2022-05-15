@@ -62,7 +62,7 @@ if plr.Team.Name == "Ghosts" then
 end
 
 plr:GetPropertyChangedSignal("Team"):Connect(function()
-    if plr.Team.Name == "Ghosts" then  --prisj helped me with this from infinite yield discord
+    if plr.Team.Name == "Ghosts" then  --prisj helped me with this (person from infinite yield discord)
         ESP.BlueToggle = true
         ESP.OrangeToggle = false
     else
