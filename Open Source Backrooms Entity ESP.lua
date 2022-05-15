@@ -10,8 +10,6 @@
     If you do end up using this, please atleast change something. It's open source, so you don't have to, but it'd be nice if you either learn something from this or add compatability patches.
 ]]--
 
-local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/batusz/uilibrarys/main/AkaliNotifLib"))();
-local Notify = AkaliNotif.Notify;
 local ESP = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kiriot22/ESP-Lib/main/ESP.lua"))()
 local Lib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoredStuff2/notify-lib/main/lib'),true))()
 
