@@ -342,7 +342,7 @@ ESP:AddObjectListener(workspace.Totems, {
     Color = Color3.fromRGB(255, 0, 255),
 })
 
-Tab2:AddButton({
+Tab1:AddButton({
     Name = "Add Objects to ESP (underground hideout",
     Callback = function()
         
@@ -363,7 +363,7 @@ ESP:AddObjectListener(workspace.Cryptids, {
     Color = Color3.fromRGB(255, 0, 0),
 })
   
-Tab2:AddButton({
+Tab1:AddButton({
     Name = "Refresh cryptids ESP",
     Callback = function()
 while true do 
