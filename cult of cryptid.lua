@@ -255,7 +255,7 @@ Tab:AddButton({
         if pid ~= 9341597882 then
             game:GetService("TeleportService"):Teleport(9341597882, LocalPlayer)
             if syn then
-                syn.queue_on_teleport('game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1614.55, 193.498, 15.7132)')
+                syn.queue_on_teleport('if not game.IsLoaded() then wait("game.IsLoaded()") game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1614.55, 193.498, 15.7132)')
             end
         elseif pid == 9341597882 then
         game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1614.55, 193.498, 15.7132)
