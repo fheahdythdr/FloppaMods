@@ -497,4 +497,79 @@ Tab2:AddTextbox({
 })
 
 end
+
+local Tab = Window:MakeTab({
+    Name = "Utilities",
+    Icon = "rbxassetid://5822168115",
+    PremiumOnly = false
+})
+
+Tab:AddButton({
+    Name = "Infinite Yield",
+    Callback = function()
+        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Infinite-Store/Infinite-Store/main/main.lua"))()
+    end
+})
+
+Tab:AddButton({
+    Name = "Fate's Admin",
+    Callback = function()
+        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))()
+    end
+})
+
+Tab:AddButton({
+    Name = "Mollermethod",
+    Callback = function()
+        			loadstring(game:HttpGet 'https://mthd.ml') {
+				bracket_toggle = Enum.KeyCode.LeftBracket;
+				debug = false;
+				volume = 5;
+				bracket_external = false;
+			theme = {
+				accent = "#ff4539";
+				background = "#1c1c1c";
+				foreground = "#f0f6fc";
+			};
+		}
+end
+})
+
+Tab:AddLabel("Mollermethod's keybind is Left Bracket, aka [")
+
+Tab:AddButton({
+    Name = "Rejoin Game",
+    Callback = function()
+        game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId,game.JobId)
+    end
+})
+	
+Tab:AddButton({
+    Name = "Join our Discord!",
+    Callback = function()
+        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/fheahdythdr/legendary-train/main/discord%20invite.lua"))()
+    end
+})
+
+local Tab = Window:MakeTab({
+    Name = "Modifying",
+    Icon = "rbxassetid://4498590361",
+    PremiumOnly = false
+})
+
+Tab:AddParagraph("How to modify this script","Dark Dex and SimpleSpy are your best utilities for this, just find things you wanna add (ex. silent aim) and then modify according things.")
+
+Tab:AddButton({
+    Name = "Dark Dex",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/fheahdythdr/legendary-train/main/dark%20dex.lua"))()
+    end
+})
+
+Tab:AddButton({
+    Name = "SimpleSpy",
+    Callback = function()
+        loadstring(game:HttpGetAsync("https://github.com/exxtremestuffs/SimpleSpySource/raw/master/SimpleSpy.lua"))()
+    end
+})
 OrionLib:Init()
