@@ -446,12 +446,6 @@ Tab2:AddButton({
 Tab2:AddButton({
     Name = "Finish Part 1 (after exiting asylum)",
     Callback = function()
-        for i,v in pairs(workspace.Debris.Items:GetDescendants()) do
-            if v:IsA("ClickDetector") and v.Parent ~= "CollectableLog" then
-                fireclickdetector(v)
-            end
-        end
-        wait(0.1)
         gservice:FireServer(unpack(arg1))
         wait(0.1)
         gservice:FireServer(unpack(arg2))
