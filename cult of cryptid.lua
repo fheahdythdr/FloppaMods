@@ -406,18 +406,7 @@ ESP:AddObjectListener(workspace.Cryptids, {
 end
 end
 }) 
-
-Tab2:AddButton({
-    Name = "Collect all Totems",
-    Callback = function()
-        for i,v in pairs(workspace.Totems:GetDescendants()) do
-            if v:IsA("ClickDetector") then
-                fireclickdetector(v)
-            end
-        end
-    end
-})
-
+	
 Tab2:AddButton({
     Name = "Collect all Masks",
     Callback = function()
