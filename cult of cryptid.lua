@@ -336,13 +336,42 @@ Tab2:AddButton({
     end
 })
 
+Tab2:AddParagraph("Info", "You can only multiply up to 50, don't try changing value afterwards either else it'll break.")
+Tab2:AddTextbox({
+	Name = "Multiply Bullets Fired",
+	Default = "1",
+	TextDisappear = true,
+	Callback = function(Value)
+        local settings = {repeatamount = Value, exceptions = {"SayMessageRequest","GunService","CryptidService","AdminService","PartOne","ControlService","CollectableService","GameService","AudioService","GuiService","ShowMessage","LoadService","EndingService","ToolService","PetService","GivePets","SkinService","ApplySkin","BuyCrate","SpawnPets","RemovePet","TotemService","TotemGUIService","BecomeService"}}
+        local mt = getrawmetatable(game)
+        local old = mt.__namecall
+        setreadonly(mt, false)
+        mt.__namecall = function(uh, ...)
+               local args = {...}
+               local method = getnamecallmethod()
+               for i,o in next, settings.exceptions do
+                       if uh.Name == o then
+                           return old(uh, ...)
+                       end
+               end
+               if method == "FireServer" or method == "InvokeServer" then
+                       for i = 1,settings.repeatamount do
+                           old(uh, ...)
+                       end
+               end
+               return old(uh, ...)
+        end
+        setreadonly(mt, true)
+	end	  
+})
+
 elseif pid == 6996352354 then
  
 ESP:AddObjectListener(workspace.Totems, {
     Color = Color3.fromRGB(255, 0, 255),
 })
 
-Tab1:AddButton({
+Tab2:AddButton({
     Name = "Add Objects to ESP (underground hideout",
     Callback = function()
         
@@ -363,7 +392,7 @@ ESP:AddObjectListener(workspace.Cryptids, {
     Color = Color3.fromRGB(255, 0, 0),
 })
   
-Tab1:AddButton({
+Tab2:AddButton({
     Name = "Refresh cryptids ESP",
     Callback = function()
 while true do 
