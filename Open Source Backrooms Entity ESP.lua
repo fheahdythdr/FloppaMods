@@ -36,8 +36,11 @@ subgames = {
 	9590705492,
 	8539953031,
 	9595282079,
-	9606387886
+	9606387886,
+	9627727722
 }
+
+hrp = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
 
 if table.find(subgames, cg) then
     
@@ -95,6 +98,13 @@ Tab:AddButton({
     Name = "Teleport to Level 166",
     Callback = function()
         game:GetService("TeleportService"):Teleport(9361563014, LocalPlayer)
+    end
+})
+	
+Tab:AddButton({
+    Name = "Teleport to Mr Kitty's House,
+    Callback = function()
+        game:GetService("TeleportService"):Teleport(9627727722, LocalPlayer)
     end
 })
 
@@ -578,20 +588,6 @@ ESP:AddObjectListener(workspace, {
     IsEnabled = "ENT_ESP"
 })
 
-elseif game.PlaceId == 3227921645 then
-    
-Lib.prompt('INFO', "This is a Backrooms game made by a different person, however I have still made Entity/Exit ESP for it.", 15)
-Lib.prompt('INFO', 'Loading ESP for "The True Backrooms" by Kord_K', 15)
-
-ESP:Add(workspace.ExitTriggers.SpeakerPlaceTrigger, EXIT)
-ESP:Add(workspace.ExitTriggers.TeleTrigger2, EXIT)
-ESP:Add(workspace.ExitTriggers.ExitTrigger, EXIT)
-ESP:Add(workspace.ExitTriggers.TeleTrigger3, EXIT)
-ESP:Add(workspace.ExitTriggers.AlternateExitTrigger, EXIT)
-ESP:Add(workspace.ExitTriggers.TeleTrigger1, EXIT)
-
-Lib.prompt('INFO', "I will not be making ESP for any sub-game here, as my goal was to make ESP for CertifiedJerkFace123/Gamer's The Backrooms game.", 20)
-
 elseif game.PlaceId == 9364689381 then
 game:GetService("CoreGui").Orion.Enabled = false
 Lib.prompt('INFO', "Orion has been hidden since this game forces first person.", 15)
@@ -683,6 +679,46 @@ end
 ESP:Add(workspace.ENTITY_DANCE, alreadyexisting)
 ESP:Add(workspace.Part, EXIT)
 
+elseif game.PlaceId == 9627727722 then
+		
+ESP:AddObjectListener(workspace, {
+    Color = Color3.new(255, 255, 0255),
+    Type = "Part",
+    Name = "Mr. Kitty",
+    CustomName = "Mr Kitty",
+    IsEnabled = "ENT_ESP"
+})
+		
+ESP:AddObjectListener(workspace, {
+    Color = Color3.new(0, 255, 255),
+    Type = "MeshPart",
+    Name = "door01_left_Body",
+    CustomName = "Exit",
+    IsEnabled = "EX_ESP"
+})
+
+local gromitmug = {
+	Name = "Gromit Mug",
+	Color = Color3.new(0, 0, 255)
+}
+		
+local plushie = {
+	Name = "Plushie",
+	Color = Color3.new(0, 0, 255)
+}
+		
+ESP:Add(workspace.GromitMug, gromitmug)
+ESP:Add(workspace.Plushie, plushie)
+
+Tab:AddButton({
+    Name = "Exit Level",
+    Callback = function()
+		game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(48.6000328, 6.88333511, -84.4833221)
+		wait(0.1)
+		fireproximityprompt(game:GetService("Workspace")["door01_left_Body"].ProximityPrompt)
+    end
+})
+		
 end
 ESP:Toggle(true)
 
