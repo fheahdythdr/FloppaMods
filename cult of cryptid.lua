@@ -13,7 +13,7 @@ local firething = {
 
 local Lib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoredStuff2/notify-lib/main/lib'),true))()
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "cult of the cryptids script but i smoked meth", HidePremium = false, SaveConfig = true, ConfigFolder = "funni coc esp"})
+local Window = OrionLib:MakeWindow({Name = "cult of the cryptids but on meth", HidePremium = false, SaveConfig = true, ConfigFolder = "funni coc esp"})
 
 local Tab2 = Window:MakeTab({
     Name = "Main",
@@ -80,6 +80,7 @@ end
 
 if pid == 6996352354 then
 
+wto = workspace.Totems
 gservice = game:GetService("ReplicatedStorage").Remotes.RemoteEvents.GameService
 tservice = game:GetService("ReplicatedStorage").Remotes.RemoteEvents.ToolService
 
@@ -406,6 +407,71 @@ ESP:AddObjectListener(workspace.Cryptids, {
 end
 end
 }) 
+
+Tab2:AddButton({
+    Name = "Collect all Totems",
+    Callback = function()
+        getgenv().HRPOSITION = hrp.CFrame
+        wait(0.25)
+        hrp.CFrame = workspace.Totems.Totem1.CFrame
+        wait(0.25)
+        fireclickdetector(workspace.Totems.Totem1.ClickDetector)
+        wait(0.25)
+        hrp.CFrame = workspace.Totems.Totem2.CFrame
+        wait(0.25)
+        fireclickdetector(workspace.Totems.Totem2.ClickDetector)
+        wait(0.25)
+        hrp.CFrame = workspace.Totems.Totem3.CFrame
+        wait(0.25)
+        fireclickdetector(workspace.Totems.Totem3.ClickDetector)
+        wait(0.25)
+        hrp.CFrame = workspace.Totems.Totem4.CFrame
+        wait(0.25)
+        fireclickdetector(workspace.Totems.Totem4.ClickDetector)
+        wait(0.25)
+        hrp.CFrame = wto.Totem5.CFrame
+        wait(0.25)
+        fireclickdetector(wto.Totem5.ClickDetector)
+        wait(0.25)
+        hrp.CFrame = wto.Totem6.CFrame
+        wait(0.25)
+        fireclickdetector(wto.Totem6.ClickDetector)
+        wait(0.25)
+        hrp.CFrame = wto.Totem7.CFrame
+        wait(0.25)
+        fireclickdetector(wto.Totem7.ClickDetector)
+        wait(0.25)
+        hrp.CFrame = wto.Totem8.CFrame
+        wait(0.25)
+        fireclickdetector(wto.Totem8.ClickDetector)
+        wait(0.25)
+        hrp.CFrame = wto.RareTotem1.CFrame
+        wait(0.25)
+        fireclickdetector(wto.RareTotem1.ClickDetector)
+        wait(0.25)
+        hrp.CFrame = workspace.Totems.RareTotem2.CFrame
+        wait(0.25)
+        fireclickdetector(workspace.Totems.RareTotem2.ClickDetector)
+        wait(0.25)
+        hrp.CFrame = workspace.Totems.RareTotem3.CFrame
+        wait(0.25)
+        fireclickdetector(workspace.Totems.RareTotem3.ClickDetector)
+        wait(0.25)
+        hrp.CFrame = workspace.Totems.RareTotem4.CFrame
+        wait(0.25)
+        fireclickdetector(workspace.Totems.RareTotem4.ClickDetector)
+        wait(0.25)
+        hrp.CFrame = wto.RareTotem5.CFrame
+        wait(0.25)
+        fireclickdetector(wto.RareTotem5.ClickDetector)
+        wait(0.25)
+        hrp.CFrame = wto.RareTotem6.CFrame
+        wait(0.25)
+        fireclickdetector(wto.RareTotem6.ClickDetector)
+        wait(0.25)
+        hrp.CFrame = getgenv().HRPOSITION
+    end
+})
 	
 Tab2:AddButton({
     Name = "Collect all Masks",
