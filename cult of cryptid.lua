@@ -17,7 +17,7 @@ local firething = {
 
 local Lib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoredStuff2/notify-lib/main/lib'),true))()
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "cult of the cryptids script but i smoked too much meth", HidePremium = false, SaveConfig = true, ConfigFolder = "funni coc esp"})
+local Window = OrionLib:MakeWindow({Name = "cult of the cryptids script but i smoked meth", HidePremium = false, SaveConfig = true, ConfigFolder = "funni coc esp"})
 
 local Tab2 = Window:MakeTab({
     Name = "Main",
