@@ -186,8 +186,10 @@ Lib.prompt('INFO', "Default Orion hide keybind is RIGHT SHIFT.", 15)
 if pid == 5082331079 then
     
 Lib.prompt('INFO', "This is the lobby, there's no esp here.", 15)
+	
+end
 
-elseif pid == 5202597474 then
+if pid == 5202597474 then
     
 ESP:AddObjectListener(workspace.TotemServiceMain.Totems, {
     Color = Color3.fromRGB(255, 0, 255),
@@ -372,7 +374,9 @@ Tab2:AddTextbox({
 	end	  
 })
 
-elseif pid == 6996352354 then
+end	
+	
+if pid == 6996352354 then
  
 ESP:AddObjectListener(workspace.Totems, {
     Color = Color3.fromRGB(255, 0, 255),
@@ -567,7 +571,7 @@ Tab2:AddTextbox({
 })
 
 end
-
+end
 local Tab = Window:MakeTab({
     Name = "Utilities",
     Icon = "rbxassetid://5822168115",
@@ -642,4 +646,5 @@ Tab:AddButton({
         loadstring(game:HttpGetAsync("https://github.com/exxtremestuffs/SimpleSpySource/raw/master/SimpleSpy.lua"))()
     end
 })
+
 OrionLib:Init()
