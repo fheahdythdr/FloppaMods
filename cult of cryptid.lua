@@ -1,3 +1,7 @@
+if identifyexecutor() == "ScriptWare" then
+	syn.queue_on_teleport = queue_on_teleport
+end
+
 workspace = game:GetService("Workspace")
 hrp = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
 pid = game.PlaceId
