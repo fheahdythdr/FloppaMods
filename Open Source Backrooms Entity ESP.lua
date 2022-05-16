@@ -102,7 +102,7 @@ Tab:AddButton({
 })
 	
 Tab:AddButton({
-    Name = "Teleport to Mr Kitty's House,
+    Name = "Teleport to Mr Kitty's House",
     Callback = function()
         game:GetService("TeleportService"):Teleport(9627727722, LocalPlayer)
     end
@@ -371,8 +371,10 @@ Tab:AddButton({
 
 ESP:Add(workspace.ENTITY_1, alreadyexisting)
 ESP:Add(workspace.ENTITY_DANCE, alreadyexisting)
+		
+end
 
-elseif game.PlaceId == 9204234205 then
+if game.PlaceId == 9204234205 then
     
 ESP:Add(workspace.ENTITY_1, alreadyexisting)
 ESP:AddObjectListener(workspace, {
@@ -432,8 +434,9 @@ Tab:AddButton({
     end
 })
 
-
-elseif game.PlaceId == 9359358716 then
+end
+		
+if game.PlaceId == 9359358716 then
     
 Lib.prompt('WARNING', "Entity ESP is slightly buggy, re-add in Misc if you can't see the entities.", 15)
 Lib.prompt('INFO', "You should see 2 entities.", 10)
@@ -482,7 +485,9 @@ Notify({
     Duration = 15;
     });
 
-elseif game.PlaceId == 9223234446 then
+end
+		
+if game.PlaceId == 9223234446 then
     
 Lib.prompt('INFO', "No esp could be made here, since there's no entities.", 15.5)
 
@@ -499,7 +504,9 @@ Tab:AddButton({
     end
 })
 
-elseif game.PlaceId == 9195387779 then
+end
+		
+if game.PlaceId == 9195387779 then
     
 Lib.prompt('INFO', "No esp could be made here, since there's no entities.", 15)
 
@@ -515,8 +522,10 @@ Tab:AddButton({
         end
     end
 })
+		
+end
 
-elseif game.PlaceId == 9289542174 then
+if game.PlaceId == 9289542174 then
     
 ESP:AddObjectListener(workspace, {
     Color = Color3.new(255, 0, 0),
@@ -539,7 +548,9 @@ Tab:AddButton({
     end
 })
 
-elseif game.PlaceId == 9280914973 then
+end		
+		
+if game.PlaceId == 9280914973 then
 
 ESP:Add(workspace.EXIT, EXIT)
 
@@ -554,7 +565,9 @@ Tab:AddButton({
     end
 })
 
-elseif game.PlaceId == 9361563014 then
+end	
+	
+if game.PlaceId == 9361563014 then
    
 local tcfr = game:GetService("Workspace")["tile/tilefloor013a"].CFrame
   
@@ -565,7 +578,9 @@ Tab:AddButton({
     end
 })
 
-elseif game.PlaceId == 9326578533 then
+end
+		
+if game.PlaceId == 9326578533 then
     
 local dcfr = game:GetService("Workspace")["tools/toolswhite"].CFrame
 
@@ -576,7 +591,9 @@ Tab:AddButton({
     end
 })
 
-elseif game.PlaceId == 8539953031 then
+end
+		
+if game.PlaceId == 8539953031 then
     
 Lib.prompt('INFO', "There is no way to teleport back to Rural Area here.", 15)
 
@@ -588,7 +605,9 @@ ESP:AddObjectListener(workspace, {
     IsEnabled = "ENT_ESP"
 })
 
-elseif game.PlaceId == 9364689381 then
+end
+		
+if game.PlaceId == 9364689381 then
 game:GetService("CoreGui").Orion.Enabled = false
 Lib.prompt('INFO', "Orion has been hidden since this game forces first person.", 15)
 
@@ -619,7 +638,9 @@ ESP:AddObjectListener(workspace, {
 ESP:Add(workspace.NonHostileCombineNPC, cnpc)
 ESP:Add(workspace.Gman, g_man)
 
-elseif game.PlaceId == 9590705492 then
+end
+		
+if game.PlaceId == 9590705492 then
 
 Tab:AddButton({
     Name = "Exit Level",
@@ -629,8 +650,10 @@ Tab:AddButton({
 })
 
 Lib.prompt('INFO', "No entities are here.", 10)
-
-elseif game.PlaceId == 9595282079 then
+		
+end
+		
+if game.PlaceId == 9595282079 then
 
 ESP:AddObjectListener(workspace, {
     Color = Color3.new(255, 0, 0),
@@ -649,7 +672,9 @@ Tab:AddButton({
     end
 })
 		
-elseif game.PlaceId == 9606387886 then
+end
+		
+if game.PlaceId == 9606387886 then
 	
 ESP:AddObjectListener(workspace, {
     Color = Color3.new(255, 0, 0),
@@ -678,8 +703,10 @@ end
 
 ESP:Add(workspace.ENTITY_DANCE, alreadyexisting)
 ESP:Add(workspace.Part, EXIT)
+		
+end
 
-elseif game.PlaceId == 9627727722 then
+if game.PlaceId == 9627727722 then
 		
 ESP:AddObjectListener(workspace, {
     Color = Color3.new(255, 255, 0255),
