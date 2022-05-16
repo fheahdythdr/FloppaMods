@@ -186,10 +186,8 @@ Lib.prompt('INFO', "Default Orion hide keybind is RIGHT SHIFT.", 15)
 if pid == 5082331079 then
     
 Lib.prompt('INFO', "This is the lobby, there's no esp here.", 15)
-	
-end
 
-if pid == 5202597474 then
+elseif pid == 5202597474 then
     
 ESP:AddObjectListener(workspace.TotemServiceMain.Totems, {
     Color = Color3.fromRGB(255, 0, 255),
@@ -374,9 +372,7 @@ Tab2:AddTextbox({
 	end	  
 })
 
-end	
-	
-if pid == 6996352354 then
+elseif pid == 6996352354 then
  
 ESP:AddObjectListener(workspace.Totems, {
     Color = Color3.fromRGB(255, 0, 255),
@@ -417,66 +413,65 @@ end
 }) 
 
 Tab2:AddButton({
-    Name = "Collect all Totems",
+    Name = "Collect all Totems (takes a while)",
     Callback = function()
         getgenv().HRPOSITION = hrp.CFrame
-        wait(0.25)
         hrp.CFrame = workspace.Totems.Totem1.CFrame
-        wait(0.25)
+        wait(1)
         fireclickdetector(workspace.Totems.Totem1.ClickDetector)
-        wait(0.25)
+        wait(1)
         hrp.CFrame = workspace.Totems.Totem2.CFrame
-        wait(0.25)
+        wait(1)
         fireclickdetector(workspace.Totems.Totem2.ClickDetector)
-        wait(0.25)
+        wait(1)
         hrp.CFrame = workspace.Totems.Totem3.CFrame
-        wait(0.25)
+        wait(1)
         fireclickdetector(workspace.Totems.Totem3.ClickDetector)
-        wait(0.25)
+        wait(1)
         hrp.CFrame = workspace.Totems.Totem4.CFrame
-        wait(0.25)
+        wait(1)
         fireclickdetector(workspace.Totems.Totem4.ClickDetector)
-        wait(0.25)
+        wait(1)
         hrp.CFrame = wto.Totem5.CFrame
-        wait(0.25)
+        wait(1)
         fireclickdetector(wto.Totem5.ClickDetector)
-        wait(0.25)
+        wait(1)
         hrp.CFrame = wto.Totem6.CFrame
-        wait(0.25)
+        wait(1)
         fireclickdetector(wto.Totem6.ClickDetector)
-        wait(0.25)
+        wait(1)
         hrp.CFrame = wto.Totem7.CFrame
-        wait(0.25)
+        wait(1)
         fireclickdetector(wto.Totem7.ClickDetector)
-        wait(0.25)
+        wait(1)
         hrp.CFrame = wto.Totem8.CFrame
-        wait(0.25)
+        wait(1)
         fireclickdetector(wto.Totem8.ClickDetector)
-        wait(0.25)
+        wait(1)
         hrp.CFrame = wto.RareTotem1.CFrame
-        wait(0.25)
+        wait(1)
         fireclickdetector(wto.RareTotem1.ClickDetector)
-        wait(0.25)
+        wait(1)
         hrp.CFrame = workspace.Totems.RareTotem2.CFrame
-        wait(0.25)
+        wait(1)
         fireclickdetector(workspace.Totems.RareTotem2.ClickDetector)
-        wait(0.25)
+        wait(1)
         hrp.CFrame = workspace.Totems.RareTotem3.CFrame
-        wait(0.25)
+        wait(1)
         fireclickdetector(workspace.Totems.RareTotem3.ClickDetector)
-        wait(0.25)
+        wait(1)
         hrp.CFrame = workspace.Totems.RareTotem4.CFrame
-        wait(0.25)
+        wait(1)
         fireclickdetector(workspace.Totems.RareTotem4.ClickDetector)
-        wait(0.25)
+        wait(1)
         hrp.CFrame = wto.RareTotem5.CFrame
-        wait(0.25)
+        wait(1)
         fireclickdetector(wto.RareTotem5.ClickDetector)
-        wait(0.25)
+        wait(1)
         hrp.CFrame = wto.RareTotem6.CFrame
-        wait(0.25)
+        wait(1)
         fireclickdetector(wto.RareTotem6.ClickDetector)
-        wait(0.25)
+        wait(1)
         hrp.CFrame = getgenv().HRPOSITION
     end
 })
@@ -571,7 +566,7 @@ Tab2:AddTextbox({
 })
 
 end
-end
+
 local Tab = Window:MakeTab({
     Name = "Utilities",
     Icon = "rbxassetid://5822168115",
@@ -646,5 +641,4 @@ Tab:AddButton({
         loadstring(game:HttpGetAsync("https://github.com/exxtremestuffs/SimpleSpySource/raw/master/SimpleSpy.lua"))()
     end
 })
-
 OrionLib:Init()
