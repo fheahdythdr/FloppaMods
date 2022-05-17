@@ -1,3 +1,22 @@
+--[[ 
+
+    oh hi
+
+    it's you
+    the guy who checks source code because they either want to skid it or learn from it
+    this might look weird but it's so i can edit each part of the source easier
+    here's the area for the real source files
+    https://github.com/fheahdythdr/floppamod-getmodule
+
+    the source files for cotc
+    lobby (dont know if needed) is https://github.com/fheahdythdr/floppamod-getmodule/blob/main/cotc_lobby
+    chapter 1 is https://github.com/fheahdythdr/floppamod-getmodule/blob/main/cotc_1
+    chapter 2 is https://github.com/fheahdythdr/floppamod-getmodule/blob/main/cotc_2
+
+    yeah have fun
+    i guess
+    idk
+]]--
 function hget(filepath)
     return loadstring(game:HttpGet("https://raw.githubusercontent.com/fheahdythdr/floppamod-getmodule/main/"..filepath))()
 end
