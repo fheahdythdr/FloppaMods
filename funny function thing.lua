@@ -1,4 +1,9 @@
---when the github slow
+--[[
+    
+    i will ask this again
+    why is github so slow to update
+
+]]--
 
 cg = game.PlaceId
 hrp = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
