@@ -26,7 +26,7 @@ end
 function ccfrs(cframe, savename)
     if hrp then
         savename = hrp.CFrame
-        hrp.CFrame = cframe or CFrame.new(cframe) or cframe.CFrame
+        hrp.CFrame = cframe.CFrame
     end
     return print(savename)
 end
