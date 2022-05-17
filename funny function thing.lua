@@ -23,17 +23,17 @@ function tload(tab, item, loader)
     end
 end
 
-function ccfrs(cframe, genv)
+function ccfrs(cframe, savename)
     if hrp then
-        genv = hrp.CFrame
+        savename = hrp.CFrame
         hrp.CFrame = cframe or CFrame.new(cframe) or cframe.CFrame
     end
-    return print(genv)
+    return print(savename)
 end
 
-function rtop(genv)
-    if genv then
-        hrp.CFrame = genv or CFrame.new(genv)
+function rtop(savename)
+    if savename then
+        hrp.CFrame = savename or CFrame.new(savename)
     end
 end
 
