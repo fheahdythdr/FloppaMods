@@ -3,10 +3,6 @@
     i will ask this again
     why is github so slow to update
 
-    i've had to update this 5 times so far, github still hasn't updated
-    why can't it update faster man
-    i wanna try out my script but it didn't work so i updated cframe.CFrame and the arguments to instance and instance.CFrame
-
 ]]--
 
 cg = game.PlaceId
