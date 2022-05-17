@@ -412,6 +412,8 @@ end
 end
 }) 
 
+Tab:AddLabel("WARNING, COULD GET YOU BANNED")
+	
 Tab2:AddButton({
     Name = "Collect all Totems (takes a while)",
     Callback = function()
