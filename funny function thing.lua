@@ -1,3 +1,5 @@
+--when the github slow
+
 cg = game.PlaceId
 
 hrp = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
