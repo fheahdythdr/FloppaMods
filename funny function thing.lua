@@ -3,7 +3,7 @@
     i will ask this again
     why is github so slow to update
 
-    i've had to update this 3 times so far, github still hasn't updated
+    i've had to update this 4 times so far, github still hasn't updated
 
 ]]--
 
@@ -33,7 +33,7 @@ end
 function ccfrs(instance, savename)
     if hrp then
         savename = hrp.CFrame
-        hrp.CFrame = cframe.CFrame
+        hrp.CFrame = instance.CFrame
     end
     return print(savename)
 end
