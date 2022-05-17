@@ -1,8 +1,8 @@
 --when the github slow
 
 cg = game.PlaceId
-
 hrp = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+workspace = game:GetService("Workspace")
 
 function hget(filepath)
     return loadstring(game:HttpGet("https://raw.githubusercontent.com/fheahdythdr/floppamod-getmodule/main/"..filepath))()
