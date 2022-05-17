@@ -3,7 +3,7 @@ cg = game.PlaceId
 hrp = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
 
 function hget(filepath)
-    return loadstring("https://raw.githubusercontent.com/fheahdythdr/floppamod-getmodule/main/"..filepath)
+    return loadstring(game:HttpGet("https://raw.githubusercontent.com/fheahdythdr/floppamod-getmodule/main/"..filepath))()
 end
 
 function tablech(table, item, valuen)
