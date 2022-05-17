@@ -17,8 +17,8 @@ function hget(filepath)
     return loadstring(game:HttpGet("https://raw.githubusercontent.com/fheahdythdr/floppamod-getmodule/main/"..filepath))()
 end
 
-function tablech(table, item, valuen)
-    if table.find(table, item) then
+function tablech(tab, item, valuen)
+    if table.find(tab, item) then
         valuen = true
     else
         valuen = false
@@ -29,20 +29,6 @@ end
 function tload(tab, item, loader)
     if table.find(tab, item) then
         return hget(loader)
-    end
-end
-
-function ccfrs(instance, savename)
-    if hrp then
-        savename = hrp.CFrame
-        hrp.CFrame = instance.CFrame
-    end
-    return print(savename)
-end
-
-function rtop(savename)
-    if savename then
-        hrp.CFrame = savename or CFrame.new(savename)
     end
 end
 
