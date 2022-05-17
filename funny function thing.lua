@@ -3,6 +3,8 @@
     i will ask this again
     why is github so slow to update
 
+    i've had to update this 2 times so far
+
 ]]--
 
 cg = game.PlaceId
