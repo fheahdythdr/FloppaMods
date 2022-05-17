@@ -23,7 +23,7 @@ function tload(tab, item, loader)
     end
 end
 
-function ccfrs(cframe, savename)
+function ccfrs(instance, savename)
     if hrp then
         savename = hrp.CFrame
         hrp.CFrame = cframe.CFrame
