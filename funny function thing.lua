@@ -17,7 +17,7 @@ return valuen
 end
 end
 
-function  tload(tab, item, loader)
+function tload(tab, item, loader)
     if table.find(tab, item) then
         return hget(loader)
     end
