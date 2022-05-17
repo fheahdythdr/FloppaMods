@@ -1,9 +1,11 @@
+--when the github slow
+
 cg = game.PlaceId
 
 hrp = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
 
 function hget(filepath)
-    return loadstring("https://raw.githubusercontent.com/fheahdythdr/floppamod-getmodule/main/"..filepath)
+    return loadstring(game:HttpGet("https://raw.githubusercontent.com/fheahdythdr/floppamod-getmodule/main/"..filepath))()
 end
 
 function tablech(table, item, valuen)
@@ -15,11 +17,9 @@ return valuen
 end
 end
 
-function  tload(tab, item, loader)
+function tload(tab, item, loader)
     if table.find(tab, item) then
         return hget(loader)
-    else
-        return print("wrong game lol")
     end
 end
 
