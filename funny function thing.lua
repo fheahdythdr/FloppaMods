@@ -18,8 +18,6 @@ end
 function  tload(tab, item, loader)
     if table.find(tab, item) then
         return hget(loader)
-    else
-        return print("wrong game lol")
     end
 end
 
