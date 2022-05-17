@@ -5,10 +5,10 @@
     it's you
     the guy who checks source code because they either want to skid it or learn from it
     this might look weird but it's so i can edit each part of the source easier
-    here's the area for the real source files
+    here's the area for the loaded source files (the ones this one grabs)
     https://github.com/fheahdythdr/floppamod-getmodule
 
-    the source files for cotc
+    the source files for cotc script
     lobby (dont know if needed) is https://github.com/fheahdythdr/floppamod-getmodule/blob/main/cotc_lobby
     chapter 1 is https://github.com/fheahdythdr/floppamod-getmodule/blob/main/cotc_1
     chapter 2 is https://github.com/fheahdythdr/floppamod-getmodule/blob/main/cotc_2
