@@ -823,26 +823,6 @@ Tab:AddButton({
         loadstring(game:HttpGet("https://raw.githubusercontent.com/fheahdythdr/legendary-train/main/dark%20dex.lua"))()
     end
 })
-	
-local Tab = Window:MakeTab({
-    Name = "Other Backrooms Scripts",
-    Icon = "",
-    PremiumOnly = false
-})
-	
-Tab:AddButton({
-    Name = "Unnamed GUI",
-    Callback = function()
-        loadstring(game:HttpGet("https://rawscripts.net/raw/The-Backrooms-(K.-Pixels)-GUI-2121"))()
-    end
-})
-	
-Tab:AddButton({
-    Name = "Set Clipboard to Source of Unnamed GUI",
-    Callback = function()
-        setclipboard("https://scriptblox.com/script/The-Backrooms-(K.-Pixels)-GUI-2121")
-    end
-})
 
 OrionLib:Init()
 end
