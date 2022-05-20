@@ -29,6 +29,7 @@ function tload(tab, item, loader)
 end
 
 cg = game.PlaceId
+hrp = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
 
 hget("tablefortload")
 
