@@ -479,11 +479,7 @@ Tab:AddButton({
     end
 })
 
-Notify({
-    Title = " INFO ";
-    Description = " No exit ESP could be made. Avoid entities and walk around until you find the exit.";
-    Duration = 15;
-    });
+Lib.prompt('INFO', "No entity ESP could be made, walk around until you find exit.", 8)
 
 end
 		
