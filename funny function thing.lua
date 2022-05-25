@@ -13,6 +13,10 @@ function hget(filepath)
     return loadstring(game:HttpGet("https://raw.githubusercontent.com/fheahdythdr/floppamod-getmodule/main/"..filepath))()
 end
 
+function import(filepath) --second one so i dont have to update other scripts but i can use something that sounds better
+    return loadstring(game:HttpGet("https://raw.githubusercontent.com/fheahdythdr/floppamod-getmodule/main/"..filepath))()
+end
+
 function tablech(tab, item, valuen)
     if table.find(tab, item) then
         valuen = true
