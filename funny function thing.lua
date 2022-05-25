@@ -32,10 +32,18 @@ function tload(tab, item, loader)
     end
 end
 
-function valch(value, func)
+function valcht(value, func)
     if value == true then
         return func
     else
         return print(""..value "is not true.")
+end
+end
+
+function valchf(value, func)
+    if value == false then
+        return func
+    else
+        return print(""..value "is not false.")
 end
 end
