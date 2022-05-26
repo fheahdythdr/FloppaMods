@@ -1,4 +1,5 @@
 --only used for when im making a script, dont mind
+--if you do use this then just redo the import function to lead to your desired destination instead of my repo
 local ESP = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kiriot22/ESP-Lib/main/ESP.lua"))()
 local Lib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoredStuff2/notify-lib/main/lib'),true))()
 if useOrionLib == true then
