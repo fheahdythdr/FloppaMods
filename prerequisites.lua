@@ -1,16 +1,6 @@
 --only used for when im making a script, dont mind
 --if you do use this then just redo the import function to lead to your desired destination instead of my repo
 --testing vscode github repo explorer, no new functions yet
-local ESP = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kiriot22/ESP-Lib/main/ESP.lua"))()
-local Lib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoredStuff2/notify-lib/main/lib'),true))()
-if useOrionLib == true then
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-end
-
-if useTotemLib == true then
-local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Xv3nm/TotemModestMenuLib/main/source')))()
-end
-
 cg = game.PlaceId
 hrp = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
 workspace = game:GetService("Workspace")
