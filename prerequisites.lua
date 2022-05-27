@@ -45,7 +45,7 @@ function SendAkaliNotification(titlestring, infostring, timetowait)
     local Notify = AkaliNotif.Notify;
     Notify({
     Description = ""..infostring;
-    Title = "   "..titlestring;
+    Title = ""..titlestring;
     Duration = timetowait;
     });
 end
