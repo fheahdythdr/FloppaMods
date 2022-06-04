@@ -4,7 +4,8 @@
 cg = game.PlaceId
 hrp = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
 workspace = game:GetService("Workspace")
-
+local AkaliNotif = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/batusz/uilibrarys/main/AkaliNotifLib"))();
+local Notify = AkaliNotif.Notify;
 function import(filepath)
     return loadstring(game:HttpGet("https://raw.githubusercontent.com/fheahdythdr/floppamod-getmodule/main/"..filepath))()
 end
@@ -41,8 +42,6 @@ end
 end
 
 function SendAkaliNotification(titlestring, infostring, timetowait)
-    local AkaliNotif = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/batusz/uilibrarys/main/AkaliNotifLib"))();
-    local Notify = AkaliNotif.Notify;
     Notify({
     Description = ""..infostring;
     Title = ""..titlestring;
