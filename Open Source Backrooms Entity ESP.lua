@@ -13,6 +13,13 @@
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
+OrionLib:MakeNotification({
+	Name = "Welcome!",
+	Content = "Hello Wanderer, welcome to A Wanderer's Utilities.",
+	Image = "",
+	Time = 7.5
+})
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/fheahdythdr/FloppaMods/main/prerequisites.lua"))()
 
 import("tablefortload")
@@ -44,10 +51,3 @@ for i,v in pairs(game:GetService("CoreGui").Orion:GetDescendants()) do
 end
 
 label.Text = "Wanderer"
-
-OrionLib:MakeNotification({
-	Name = "Welcome!",
-	Content = "Hello Wanderer, welcome to A Wanderer's Utilities.",
-	Image = "",
-	Time = 7.5
-})
