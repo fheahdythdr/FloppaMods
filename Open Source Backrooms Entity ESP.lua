@@ -19,14 +19,14 @@ OrionLib:MakeNotification({
 	Image = "",
 	Time = 7.5
 })
-wait(1)
+wait(2)
 OrionLib:MakeNotification({
 	Name = "Getting Script..",
 	Content = "Please, be patient while we get the correct level's script for you.",
 	Image = "",
 	Time = 8
 })
-wait(3)
+wait(4)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/fheahdythdr/FloppaMods/main/prerequisites.lua"))()
 
 import("tablefortload")
@@ -48,6 +48,7 @@ tload(prl2, cg, "Backrooms_Poolrooms_2")
 tload(lexc, cg, "Backrooms_Level_!")
 tload(l434, cg, "Backrooms_Level_434")
 tload(lean, cg, "Backrooms_Level_Leanrooms")
+tload(level1, cg, "Backrooms_Level_1")
 
 local label
 
