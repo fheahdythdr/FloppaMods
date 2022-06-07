@@ -19,7 +19,14 @@ OrionLib:MakeNotification({
 	Image = "",
 	Time = 7.5
 })
-
+wait(1)
+OrionLib:MakeNotification({
+	Name = "Getting Script..",
+	Content = "Please, be patient while we get the correct level's script for you.",
+	Image = "",
+	Time = 8
+})
+wait(3)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/fheahdythdr/FloppaMods/main/prerequisites.lua"))()
 
 import("tablefortload")
