@@ -4,6 +4,8 @@
 cg = game.PlaceId
 hrp = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
 workspace = game:GetService("Workspace")
+INT_MAX = 2 ^ 31 - 1
+INT_MIN = -(2 ^ 31)
 local AkaliNotif = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/batusz/uilibrarys/main/AkaliNotifLib"))();
 local Notify = AkaliNotif.Notify;
 function import(filepath)
