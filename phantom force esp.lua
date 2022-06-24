@@ -38,19 +38,6 @@ Tab:AddToggle({
     end    
 })
 
-Tab:AddBind({
-    Name = "Toggle UI",
-    Default = Enum.KeyCode.RightShift,
-    Hold = false,
-    Callback = function()
-        if game:GetService("CoreGui").Orion.Enabled == true then
-        game:GetService("CoreGui").Orion.Enabled = false
-        else
-        game:GetService("CoreGui").Orion.Enabled = true
-        end
-    end    
-})
-
 local plr = game:GetService("Players").LocalPlayer
 
 if plr.Team.Name == "Ghosts" then
